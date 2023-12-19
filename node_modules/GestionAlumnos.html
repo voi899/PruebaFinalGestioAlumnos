@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gestión de Alumnos</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Gestión de Alumnos</h1>
+
+  <div id="addStudent">
+    <h2>Añadir Alumno</h2>
+    <form>
+      Nombre: <input type="text" id="nombre">
+      Apellido: <input type="text" id="apellido">
+      Edad: <input type="number" id="edad">
+      Materia: <input type="text" id="materia">
+      Calificación: <input type="number" id="calificacion">
+      Grupo:
+      <select id="grupo">
+        <option value="1">Grupo 1</option>
+      </select>
+      <button type="button" onclick="addStudent()">Añadir</button>
+    </form>
+    
+    <button onclick="addGroup()">Añadir nuevo grupo</button>
+    
+  </div>
+
+  <div id="search">
+    <h2>Buscar Alumno</h2>
+    <input type="text" id="searchName" placeholder="Nombre">
+    <button onclick="searchByName()">Buscar por nombre</button>
+    
+    <input type="text" id="searchLastname" placeholder="Apellido">
+    <button onclick="searchByLastname()">Buscar por apellido</button>
+  </div>
+
+  <div>
+    <h2>Buscar promedio de alumno</h2>
+    
+    <input type="text" id="searchNameAvg" placeholder="Nombre">
+    <button onclick="searchAvgByName()">Buscar promedio por nombre</button>
+  
+    <input type="text" id="searchLastnameAvg" placeholder="Apellido">
+    <button onclick="searchAvgByLastname()">Buscar promedio por apellido</button>
+  
+    <div id="studentAvg"></div>
+  
+  </div>
+  
+  <div>
+  
+    <h2>Promedio de grupo</h2>
+  
+    <select id="grupoAvg">
+      <option value="1">Grupo 1</option>
+    </select>
+  
+    <button onclick="getAvgByGroup()">Obtener promedio de grupo</button>
+  
+    <div id="groupAvg"></div>
+  
+  </div>
+  
+  <div>
+  
+    <h2>Lista de alumnos por promedio</h2>
+  
+    <button onclick="getListAsc()">Orden ascendente</button>
+    <button onclick="getListDesc()">Orden descendente</button>
+    
+    <ul id="sortedList"></ul>
+  
+  </div>
+
+  <div id="studentsList"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
